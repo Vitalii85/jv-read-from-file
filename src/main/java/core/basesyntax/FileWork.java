@@ -24,7 +24,7 @@ public class FileWork {
         } catch (IOException e) {
             throw new RuntimeException("Can't read file " + fileName, e);
         }
-        String[] wordsStartsWith = stringBuilder.length() == 0 ? new String[0]
+        String[] wordsStartsWith = stringBuilder.isEmpty() ? new String[0]
                 : stringBuilder.toString().split(" ");
         Arrays.sort(wordsStartsWith);
         return wordsStartsWith;
